@@ -1,18 +1,18 @@
-import React from 'react';
-
-class MenuBar extends React.Component {
-  render() {
-    const menuItems = ["home", "menu", "location", "contact"];
-    const listItems = menuItems.map((item) => {
-      return <li>{item}</li>
-    });
-    return <ul>{listItems}</ul>
-  }
-}
+import React from "react";
+import MenuBar from "./components/MenuBar.js";
+import Banner from "./components/Banner.js";
+import "./App.css";
 
 function App() {
-  const value = 'Take me to your leader';
-  return <div><div><MenuBar /></div><div>Hello World. {value}</div></div>;
+  return (
+    <div>
+      <header>
+        <Banner />
+        <MenuBar />
+      </header>
+      <div></div>
+    </div>
+  );
 }
 
 export default App;
